@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="editTask.css">
+    <title>Task Management system</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="side-dashboard">
+            <div class="profile">
+                <h2>Mohd Kaif</h2>
+                <hr>
+            </div>
+            <div class="menu">
+                <ul>
+                    <a href="./index.html">
+                        <li class=" ">+ Add Task</li>
+                    </a>
+                    <a href="./showTask.html">
+                        <li class="">Show Tasks</li>
+                    </a>
+                    <a href="#">
+                        <li class="active">Edit Tasks</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="msg">Add Task Successfully</div>
+            <h2>Edit Tasks</h2>
+            <hr>
+            <form action="" class="edit-task-form">
+                <label for="">Title</label>
+                <input type="text" name="" id="" class="edit-title" placeholder="Enter your title" required>
+                <label for="">Description</label>
+                <textarea name="" id="" class="edit-desc" rows="10" placeholder="Enter your Description"></textarea>
+                <div class="completeDiv">
+                    <label for="">Complete :</label>
+                    <input type="checkbox" name="" id=""class="complete">
+                </div>
+                <button class="edit-btn">Submit</button>
+            </form>
+
+
+        </div>
+    </div>
+
+<script src="editTask.js"></script>
+</body>
+
+
+</html>
