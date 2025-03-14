@@ -56,6 +56,26 @@
   height: 100vh;
   padding: 2rem;
 }
+.task-filter{
+  width: 100%;
+}
+.task-filter ul {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  gap: 2rem;
+  list-style: none;
+}
+.task-filter ul li{
+  cursor: pointer;
+}
+.task-filter ul li:hover{
+  color: rgba(0, 0, 0, 0.647);
+}
+.task-filter ul .active-filter{
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
 .search {
   float: right;
   margin: 2rem auto;
