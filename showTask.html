@@ -8,12 +8,11 @@
     <title>Task Management system</title>
 </head>
 
-
 <body>
     <div class="main">
         <div class="side-dashboard">
             <div class="profile">
-                <h2>Mohd Kaif</h2>
+                <h2></h2>
                 <hr>
             </div>
             <div class="menu">
@@ -27,13 +26,23 @@
                     <a href="./editTask.html">
                         <li class="">Edit Tasks</li>
                     </a>
-
-
+                    <a href="">
+                        <li class="log-out">Log Out</li>
+                    </a>
+                    
                 </ul>
+                <div class="ham">
+                    <div class="line1 line"></div>
+                    <div class="line2 line"></div>
+                    <div class="line3 line"></div>
+                </div>
             </div>
         </div>
         <div class="content">
-            <h2>Show Tasks</h2>
+            <div class="page-name">
+                <h2>Show Tasks</h2>
+                <h2 class="dark-mode">Dark mode</h2>
+            </div>
             <hr>
             <div class="task-filter">
                 <ul>
@@ -47,7 +56,7 @@
             </div>
             <table>
                 <thead>
-                    <th>id</th>
+                    <th>id<span class="sorting-reverse">↕</span></th> 
                     <th>title</th>
                     <th>description</th>
                     <th>action</th>
@@ -60,7 +69,13 @@
 
         </div>
     </div>
-    <script src="showTask.js"></script>
+    <script src="showTask.js" type="module"></script>
+    <script src="all.js" type="module"></script>
+
+    <script src="logout.js"></script>
+    <script>
+      
+    </script>
 </body>
 
 </html>

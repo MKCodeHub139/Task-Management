@@ -4,15 +4,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="addTask.css">
     <title>Task Management system</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .main {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        /* background: #b9b9e2; */
+
+    }
+
+    .main h2 {
+        padding-bottom: 1rem;
+    }
+
+    .main .side-dashboard {
+        width: 25vw;
+        height: 100vh;
+        border-radius: 5px;
+        padding: 2rem;
+        background: #0000000f;
+    }
+    
+    .main .side-dashboard .menu {
+        padding-top: 2rem;
+    }
+    
+    .main .side-dashboard .menu ul {
+        list-style: none;
+    }
+    .main .side-dashboard .menu ul a{
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
+    .main .side-dashboard .menu ul li{
+        padding: 1rem .5rem;
+        background: #dae1ea;
+        margin-bottom: .5rem;
+       
+    }
+    .main .side-dashboard .menu ul li:hover{
+        background: #dae1ea1b;
+    }
+    .active{
+        background: #3a4b61 !important;
+        color: #dae1ea;
+
+    }
+    .main .content {
+        width: 75vw;
+        height: 100vh;
+        padding: 2rem;   
+    }
+    .page-name{
+    display: flex;
+    justify-content: space-between;
+}
+.page-name .dark-mode{
+    cursor: pointer;
+}
+    .msg{
+        width: 100%;
+        background: #dae1ea;
+        padding: .8rem;
+        font-size: 18px;
+        display: none;
+        justify-content: space-between;align-items: center;
+        margin-bottom: 1rem;
+    }
+    .main .content form {
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 60vw;
+        height: 70vh;
+    }
+
+    .main .content form .title ,.main .content form textarea {
+        margin-top: .5rem;
+        padding: 0.5rem 1rem;
+        width: 40vw;
+        margin-bottom: 2rem;
+        background: transparent;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+   .main .content form button {
+  padding: 0.4rem 0;
+  width: 40vw;
+  border-radius: 5px;
+  background: #0d881b;
+  font-size: 18px;
+  color: aliceblue;
+  border: none;
+  cursor: pointer;
+}
+.completeDiv{
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-left: .5rem;
+}
+
+.main .content form button:hover{
+    background: #0d881bd2;
+
+}
+@media screen and (max-width:876px){
+    .main{
+        display: block;
+    }
+ 
+    .main .side-dashboard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        height: 5rem;
+        border-radius: none;
+    }
+    
+    .main .side-dashboard .menu {
+        padding-top: 0rem;
+    }
+    
+    .main .side-dashboard .menu ul {
+        display: flex;
+        align-items: center;
+        gap:.5rem;
+        display: none;
+    } 
+    .main .side-dashboard .menu ul li{
+        margin-bottom: 0;
+    } 
+    .main .content {
+        width: 100vw;
+        height: 85vh;
+        padding: 2rem;
+    }
+    .main .content form .title ,.main .content form textarea {
+        width: 70vw;
+    }
+.completeDiv{
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-left: .5rem;
+}
+.ham{
+    height: 100%;
+    width: 3rem;
+    display: block;
+    cursor: pointer;
+
+}
+.ham .line{
+    margin-bottom: .5rem;
+    height: 2px;
+    background: #000;
+}
+.ham .line1{
+    width: 100%;
+}
+.ham .line2{
+    width: 70%;
+    float: right;
+    
+}
+.ham .line3{
+    width: 100%;
+    float: right;
+}
+}
+
+</style>
 
 <body>
     <div class="main">
         <div class="side-dashboard">
             <div class="profile">
-                <h2>Mohd Kaif</h2>
+                <h2></h2>
                 <hr>
             </div>
             <div class="menu">
@@ -20,12 +206,23 @@
                     <a href="#"> <li class=" active">+ Add Task</li></a>
                     <a href="./showTask.html"><li class="">Show Tasks</li></a>
                     <a href="./editTask.html"><li class="">Edit Tasks</li></a>
+                    <a href="">
+                        <li class="log-out">Log Out</li>
+                    </a>
                 </ul>
+                <div class="ham">
+                    <div class="line1 line"></div>
+                    <div class="line2 line"></div>
+                    <div class="line3 line"></div>
+                </div>
             </div>
         </div>
         <div class="content">
             <div class="msg">Add Task Successfully</div>
-            <h2>Add Tasks</h2>
+            <div class="page-name">
+                <h2>Add Tasks</h2>
+                <h2 class="dark-mode">Dark mode</h2>
+            </div>
             <hr>
                 <form action="" class="add-task-form">
                     <label for="">Title</label>
@@ -42,6 +239,8 @@
         </div>
     </div>
     <script src="addTask.js"></script>
+    <script src="logout.js"></script>
+    <script src="all.js" type="module"></script>
     <script>
        
     </script>
