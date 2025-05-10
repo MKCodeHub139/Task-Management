@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="showTask.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Task Management system</title>
 </head>
 
@@ -17,18 +19,18 @@
             </div>
             <div class="menu">
                 <ul>
-                    <a href="./index.html">
-                        <li class=" ">+ Add Task</li>
-                    </a>
-                    <a href="#">
-                        <li class="active">Show Tasks</li>
-                    </a>
-                    <a href="./editTask.html">
-                        <li class="">Edit Tasks</li>
-                    </a>
-                    <a href="">
-                        <li class="log-out">Log Out</li>
-                    </a>
+                        <a href="./addTask.html">
+                            <li class=" "><i class="fa-solid fa-plus"></i> Add Task</li>
+                        </a>
+                        <a href="#">
+                            <li class="active"><i class="fa-solid fa-list-check"></i> Show Tasks</li>
+                        </a>
+                        <a href="./editTask.html">
+                            <li class=""><i class="fa-solid fa-pencil"></i> Edit Tasks</li>
+                        </a>
+                        <a href="">
+                            <li class="log-out"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</li>
+                        </a>
                     
                 </ul>
                 <div class="ham">
@@ -39,9 +41,15 @@
             </div>
         </div>
         <div class="content">
+            <div class="msg">Delete Task Successfully</div>
             <div class="page-name">
                 <h2>Show Tasks</h2>
-                <h2 class="dark-mode">Dark mode</h2>
+                <div class=" dark-mode">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                    <p>Dark Mode</p>
+                </div>
+                <!-- <h2 class="dark-mode">Dark mode</h2> -->
+
             </div>
             <hr>
             <div class="task-filter">
@@ -66,16 +74,12 @@
                 </tbody>
             </table>
             <p class="no-task">No tasks...</p>
-
         </div>
     </div>
-    <script src="showTask.js" type="module"></script>
+    <footer>
+        <p>&copy; 2025 Mohd Kaif. All rights reserved.</p>
+    </footer>
     <script src="all.js" type="module"></script>
-
-    <script src="logout.js"></script>
-    <script>
-      
-    </script>
+    <script src="showTask.js" type="module"></script>
 </body>
-
 </html>

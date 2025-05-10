@@ -1,0 +1,67 @@
+.main .content {
+    width: 75vw;
+    height: 100vh;
+    padding: 2rem;   
+}
+
+.main .content form {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 60vw;
+    height: 70vh;
+}
+
+.main .content form .title ,.main .content form textarea {
+    margin-top: .5rem;
+    padding: 0.5rem 1rem;
+    width: 40vw;
+    margin-bottom: 2rem;
+    /* background: transparent; */
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.main .content form button {
+padding: 0.4rem 0;
+width: 40vw;
+border-radius: 5px;
+background: #0d881b;
+font-size: 18px;
+color: aliceblue;
+border: none;
+cursor: pointer;
+}
+.completeDiv{
+height: 2rem;
+width: 6rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 1rem;
+margin-left: .5rem;
+}
+
+.main .content form button:hover{
+background: #0d881bd2;
+
+}
+@media screen and (max-width:876px){ 
+.main .content {
+    width: 100vw;
+    height: 85vh;
+    padding: 2rem;
+}
+.main .content form .title ,.main .content form textarea {
+    width: 70vw;
+}
+.completeDiv{
+height: 2rem;
+width: 6rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 1rem;
+margin-left: .5rem;
+}
+}

@@ -78,13 +78,21 @@ function renderTasks(data){
     
         tbody.addEventListener('click',(e)=>{
             if(e.target.classList.contains('delete-btn')){
-                let tr = e.target.closest('tr');
-                let id = tr.querySelector('.id').id;
-                fetch(`${url}${id}`,{
-                    method:'DELETE',
-                    headers:{'content-type':'application/json'},
-                    
-                }).then(response=>response.json()).then(()=>tbody.innerHTML='').then(()=>fetchApi()).catch(error=>console.error('error',error))
+                if(confirm('Are You Sure You Want To Delete This Task')){
+                    let tr = e.target.closest('tr');
+                    let id = tr.querySelector('.id').id;
+                    let msg=document.querySelector('.msg')
+                    console.log(msg)
+                    fetch(`${url}${id}`,{
+                        method:'DELETE',
+                        headers:{'content-type':'application/json'},
+                        
+                    }).then(response=>response.json()).then(()=>tbody.innerHTML='').then(()=>{
+                        fetchApi()
+                        msg.style.display ='flex'
+                    }).then(()=> setTimeout(()=>{msg.style.display='none' },3000)).catch(error=>console.error('error',error))
+    
+                }
             }
             else if(e.target.classList.contains('edit-btn')){
                 let editBtns =document.querySelectorAll('.edit-btn')

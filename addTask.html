@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="all.css">
-    <link rel="stylesheet" href="./editTask.css">
+    <link rel="stylesheet" href="./addTask.css">
     <title>Task Management system</title>
 </head>
 <body>
@@ -18,20 +18,19 @@
             </div>
             <div class="menu">
                 <ul>
-                    <a href="./addTask.html">
-                        <li class=" "><i class="fa-solid fa-plus"></i> Add Task</li>
+                    <a href="#">
+                        <li class="active"><i class="fa-solid fa-plus"></i> Add Task</li>
                     </a>
                     <a href="showTask.html">
                         <li class=""><i class="fa-solid fa-list-check"></i> Show Tasks</li>
                     </a>
-                    <a href="#">
-                        <li class="active"><i class="fa-solid fa-pencil"></i> Edit Tasks</li>
+                    <a href="./editTask.html">
+                        <li class=""><i class="fa-solid fa-pencil"></i> Edit Tasks</li>
                     </a>
                     <a href="">
                         <li class="log-out"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</li>
                     </a>
-                
-            </ul>
+                </ul>
                 <div class="ham">
                     <div class="line1 line"></div>
                     <div class="line2 line"></div>
@@ -40,37 +39,31 @@
             </div>
         </div>
         <div class="content">
-            <div class="msg">Edit Task Successfully</div>
+            <div class="msg">Add Task Successfully</div>
             <div class="page-name">
-                <h2>Edit Tasks</h2>
+                <h2>Add Tasks</h2>
                 <div class=" dark-mode">
                     <i class="fa-solid fa-circle-half-stroke"></i>
                     <p>Dark Mode</p>
                 </div>
             </div>
             <hr>
-            <form action="" class="edit-task-form">
-                <label for="">Title</label>
-                <input type="text" name="" id="" class="edit-title" placeholder="Enter your title" required>
-                <label for="">Description</label>
-                <textarea name="" id="" class="edit-desc" rows="10" placeholder="Enter your Description"></textarea>
-                <div class="completeDiv">
+                <form action="" class="add-task-form">
+                    <label for="">Title</label>
+                    <input type="text" name="" id="" class="title" placeholder="Enter your title" required>
+                    <label for="">Description</label>
+                    <textarea name="" id="" class="desc" rows="10" placeholder="Enter your Description"></textarea>
+                    <div class="completeDiv">
                     <label for="">Complete :</label>
-                    <input type="checkbox" name="" id=""class="complete">
+                    <input type="checkbox" name="" id=""class="complete" >
                 </div>
-                <button class="edit-btn">Edit Task</button>
-            </form>
-
+                    <button class="add-task-btn">Add Task</button>
+                </form>
 
         </div>
     </div>
     <script src="all.js" type="module"></script>
-    <script src="editTask.js" type=""></script>
-    
-    <script type="module">
-      
-    </script>
+    <script src="addTask.js"></script>
 </body>
-
 
 </html>

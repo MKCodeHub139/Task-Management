@@ -27,21 +27,29 @@ noAccount.addEventListener("click", (e) => {
 });
 registerForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  fetch(userApi,{
-    method:'POST',
-    headers:{
-      'content-type':'application/json'
-    },
-    body:JSON.stringify({
-      username: regUsername.value,
-      password: regPassword.value,
-
-    })
-  }).then(res=>res.json()).then((data)=>{
-    alert(`registered successfully ${data.username}`)
-    window.location.assign('http://127.0.0.1:5500/index.html')
+  fetch(userApi).then(res=>res.json()).then((data)=>{
+    let filterUser=data.filter(user=>user.username == regUsername.value)
+    if(filterUser==0){
+      fetch(userApi,{
+        method:'POST',
+        headers:{
+          'content-type':'application/json'
+        },
+        body:JSON.stringify({
+          username: regUsername.value,
+          password: regPassword.value,
+    
+        })
+      }).then(res=>res.json()).then((data)=>{
+        alert(`Registered successfully ${data.username}`)
+        window.location.assign('http://127.0.0.1:5500/addTask.html')
+      })
+      .catch(error=>console.error(error))
+    }
+    else{
+      alert('userName already exists')
+    }
   })
-  .catch(error=>console.error(error))
 });
 
 loginForm.addEventListener("submit", (e) => {
@@ -49,14 +57,14 @@ loginForm.addEventListener("submit", (e) => {
   fetch(userApi).then(res=>res.json()).then((data)=>{
     let filteredUser =data.filter((task=>task.username===loginUsername.value && task.password===loginPassword.value))
     if (filteredUser.length === 1) {
-        window.location.assign('http://127.0.0.1:5500/index.html')
+        window.location.assign('http://127.0.0.1:5500/addTask.html')
         let user={
           id:filteredUser[0].id,
           username:filteredUser[0].username,
           password:filteredUser[0].password,
         }
         localStorage.setItem('user',JSON.stringify(user))
-        alert(`Hello ${filteredUser[0].username} logged in successfully`);
+        alert(`Hello ${filteredUser[0].username} you are Logged in successfully`);
       } else {
         alert("Invalid username or password");
       }  })

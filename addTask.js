@@ -8,8 +8,6 @@ let msg =document.querySelector('.msg')
 
 let url ="https://6810aa1e27f2fdac24124df0.mockapi.io/api/v1/tasks/tasks/";
 
-
-
 let profileName=document.querySelector('.profile h2')
 profileName.innerHTML=user.username
 
